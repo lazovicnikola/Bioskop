@@ -36,12 +36,7 @@ public class KorisnikRest {
         return Response.ok().entity(k).build();
     }
     
-    @GET
-    @Produces(MediaType.APPLICATION_JSON)
-    @Path("/cao")
-    public String hello() {
-        return "Čao";
-    }
+   
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)

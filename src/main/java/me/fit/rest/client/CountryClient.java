@@ -6,15 +6,14 @@ import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
-import me.fit.model.rest.client.Film;
+import me.fit.model.rest.client.Country;
 
 @Path("/api/v3")
 @RegisterRestClient
-public interface FilmClient {
+public interface CountryClient {
 
-    @GET
-    @Path("/AvailableFilms")
-    List<Film> getAll();
-    
+	@GET
+	@Path("/AvailableCountries")
+    List<Country> getAll();
+	
 }
-
