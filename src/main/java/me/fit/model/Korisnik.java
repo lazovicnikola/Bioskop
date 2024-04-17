@@ -1,11 +1,15 @@
 package me.fit.model;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.NamedQueries;
 import jakarta.persistence.NamedQuery;
+import jakarta.persistence.OneToOne;
+import me.fit.model.rest.client.IpClient;
 
 @Entity
 @NamedQueries({ 
@@ -29,7 +33,10 @@ public class Korisnik {
 
     private String sifra;
 
-    // Možete dodati i dodatne atribute i metode prema potrebi
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private IpClient ipClient;
+
+   
 
     public Long getId() {
         return id;
