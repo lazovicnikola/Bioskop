@@ -9,7 +9,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.NamedQueries;
 import jakarta.persistence.NamedQuery;
 import jakarta.persistence.OneToOne;
-import me.fit.model.rest.client.IpClient;
+//import me.fit.model.rest.client.IpClient;
 
 @Entity
 @NamedQueries({ 
@@ -33,8 +33,8 @@ public class Korisnik {
 
     private String sifra;
 
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private IpClient ipClient;
+//    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+//    private IpClient ipClient;
 
    
 
